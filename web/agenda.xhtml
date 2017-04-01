@@ -1,0 +1,538 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="/WEB-INF/template/template.xhtml">
+
+        <ui:define name="contenido">
+
+            <main> 
+                <!--TOdo resposcto a la page-->
+
+                <div class="container-iner">
+                    <div id="page-wrapper">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2" style="margin-top: 40px;">
+
+                                <div class="row">
+                                    <div class="col-md-6" style="width:100%;">
+                                        <div class="x_panel">
+                                            <div class="x_title">
+
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="x_content">
+                                                <div id='calendar'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2 " style="margin-top:40px;">
+
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="t">
+                                                Horario Programa Prenatal
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <div class="page-header">
+                                                <h2 class="text-center">Horario Programa Prenatal</h2>
+
+                                                <table data-toggle="table" data-pagination="true" data-search="true" data-row-style="rowStyle" data-sort-name="usuarios" data-sort-order="desc" data-show-columns="true" data-page-list="[5,10,20,50,100,200]" data-show-refresh="true"
+                                                       data-show-toggle="true">
+                                                    <thead>
+                                                        <tr>
+                                                            <th data-field="id" data-haling="right" data-aling="center">Hora</th>
+                                                            <th data-field="name"  >Lunes</th>
+                                                            <th data-field="dia" >Martes</th>
+                                                            <th data-field="dia1" >Miercoles</th>
+                                                            <th data-field="dia2" >Jueves</th>
+                                                            <th data-field="dia3" >Viernes</th>
+                                                            <th data-field="dia4" >Sabado</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>7:00 AM - 8:30 AM</td>
+                                                            <td>Spa Prenatal</td>
+                                                            <td>Yoga</td>
+                                                            <td>--</td>
+                                                            <td>Nutricionista</td>
+                                                            <td>Drenaje  Linfático</td>
+                                                            <td>Ginecologia</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9:00 AM - 10:30 AM</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>Drenaje Linfático</td>
+                                                            <td>--</td>
+                                                            <td>Rumba</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>11:00 AM - 1:30 PM</td>
+                                                            <td>Curso Psicoprofiláctico</td>
+                                                            <td>Esferodinamia</td>
+                                                            <td>Yoga</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>Drenaje Linfático</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1:30 PM - 2:30 PM</td>
+                                                            <td>--</td>
+                                                            <td>Fisioterapia</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>Ginecologia</td>
+                                                            <td>Spa Prenatal</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3:00 PM - 4:30 PM</td>
+                                                            <td>---</td>
+                                                            <td>Yoga</td>
+                                                            <td>--</td>
+                                                            <td>Fisioterapia</td>
+                                                            <td>Obstreticia</td>
+                                                            <td>--</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5:00 PM - 6:30 PM</td>
+                                                            <td>Rumba</td>
+                                                            <td>--</td>
+                                                            <td>Esferodinamia</td>
+                                                            <td>--</td>
+                                                            <td>Nutricionista</td>
+                                                            <td>--</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7:00 PM - 8:00 PM</td>
+                                                            <td>Pilates</td>
+                                                            <td>Fisioterapia</td>
+                                                            <td>--</td>
+                                                            <td>--</td>
+                                                            <td>Spa Prenatal</td>
+                                                            <td>--</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="t">
+                                                Horario Programa Posparto
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            <div class="col-md-12 col-md-offset-0">
+                                                <div class="page-header">
+                                                    <h2 class="text-center">Horario Programa Posparto</h2>
+
+                                                    <table data-toggle="table" data-pagination="true" data-search="true" data-row-style="rowStyle" data-sort-name="usuarios" data-sort-order="desc" data-show-columns="true" data-page-list="[5,10,20,50,100,200]" data-show-refresh="true"
+                                                           data-show-toggle="true">
+                                                        <thead>
+                                                            <tr>
+                                                                <th data-field="id" data-haling="right" data-aling="center">Hora</th>
+                                                                <th data-field="name" >Lunes</th>
+                                                                <th data-field="dia" data-aling="center">Martes</th>
+                                                                <th data-field="dia2" data-aling="center">Miercoles</th>
+                                                                <th data-field="dia3" data-aling="center">Jueves</th>
+                                                                <th data-field="dia4" data-aling="center">Viernes</th>
+                                                                <th data-field="dia5" data-aling="center">Sabado</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>7:00 AM - 8:30 AM</td>
+                                                                <td>Ginecologia</td>
+                                                                <td>Yoga</td>
+                                                                <td>Medicina Estética</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Nutricionista</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>9:00 AM - 10:30 AM</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Reducción de peso</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Body Jam</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>11:00 AM - 1:30 PM</td>
+                                                                <td>Curso Psicoprofiláctico</td>
+                                                                <td>Tono Hipopresivo</td>
+                                                                <td>Yoga</td>
+                                                                <td>--</td>
+                                                                <td>Gimnasia Hipopresiva</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1:30 PM - 2:30 PM</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Drenaje Mamario</td>
+                                                                <td>--</td>
+                                                                <td>Medicina Estética</td>
+                                                                <td>Spa</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3:00 PM - 4:30 PM</td>
+                                                                <td>---</td>
+                                                                <td>Yoga</td>
+                                                                <td>--</td>
+                                                                <td>Pilates</td>
+                                                                <td>Ginecologia</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5:00 PM - 6:30 PM</td>
+                                                                <td>--</td>
+                                                                <td>Pilates</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Nutricionista</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>7:00 PM - 8:00 PM</td>
+                                                                <td>Electro estimulación</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Spa</td>
+                                                                <td>--</td>
+                                                                <td>Biofeedback</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="t">
+                                                Horario Programa Club Bebe
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                            <div class="col-md-12 col-md-offset-0">
+                                                <div class="page-header">
+                                                    <h2 class="text-center">Horario Programa Club Bebé</h2>
+
+
+                                                    <table data-toggle="table" data-pagination="true" data-search="true" data-row-style="rowStyle" data-sort-name="usuarios" data-sort-order="desc" data-show-columns="true" data-page-list="[5,10,20,50,100,200]" data-show-refresh="true"
+                                                           data-show-toggle="true">
+                                                        <thead>
+                                                            <tr>
+                                                                <th data-field="id" data-haling="right" data-aling="center">Hora</th>
+                                                                <th data-field="name" >Lunes</th>
+                                                                <th data-field="dia" >Martes</th>
+                                                                <th data-field="dia1" >Miercoles</th>
+                                                                <th data-field="dia2" >Jueves</th>
+                                                                <th data-field="dia3" >Viernes</th>
+                                                                <th data-field="dia4" >Sabado</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>7:00 AM - 8:30 AM</td>
+                                                                <td>--</td>
+                                                                <td>Yoga Baby</td>
+                                                                <td>Taller Shantala</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Nutricionista</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>9:00 AM - 10:30 AM</td>
+                                                                <td>--</td>
+                                                                <td>Taller Shantala</td>
+                                                                <td>--</td>
+                                                                <td>Clase de Baby Rumba</td>
+                                                                <td>--</td>
+                                                                <td>Body Jam</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>11:00 AM - 1:30 PM</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Taller Shantala</td>
+                                                                <td>Yoga Baby</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1:30 PM - 2:30 PM</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3:00 PM - 4:30 PM</td>
+                                                                <td>---</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5:00 PM - 6:30 PM</td>
+                                                                <td>--</td>
+                                                                <td>Yoga Baby</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Rumba Baby</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>7:00 PM - 8:00 PM</td>
+                                                                <td>--</td>
+                                                                <td>Taller Padres y Cudiadores</td>
+                                                                <td>--</td>
+                                                                <td>Taller Padres y Cudiadores</td>
+                                                                <td>--</td>
+                                                                <td>Taller Padres y Cudiadores</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="t">
+                                                Horario Programa Spa
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                        <div class="panel-body">
+                                            <div class="col-md-12 col-md-offset-0">
+                                                <div class="page-header">
+                                                    <h2 class="text-center">Horario Programa Spa</h2>
+
+
+                                                    <table data-toggle="table" data-pagination="true" data-search="true" data-row-style="rowStyle" data-sort-name="usuarios" data-sort-order="desc" data-show-columns="true" data-page-list="[5,10,20,50,100,200]" data-show-refresh="true"
+                                                           data-show-toggle="true">
+                                                        <thead>
+                                                            <tr>
+                                                                <th data-field="id" data-haling="right" data-aling="center">Hora</th>
+                                                                <th data-field="name" >Lunes</th>
+                                                                <th data-field="dia" >Martes</th>
+                                                                <th data-field="dia1" >Miercoles</th>
+                                                                <th data-field="dia2" >Jueves</th>
+                                                                <th data-field="dia3" >Viernes</th>
+                                                                <th data-field="dia4" >Sabado</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>7:00 AM - 8:30 AM</td>
+                                                                <td>--</td>
+                                                                <td>Suana</td>
+                                                                <td>Chocolato Terapia</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Aroma Terapia</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>9:00 AM - 10:30 AM</td>
+                                                                <td>Chocolato Terapia</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Masaje con Cuarzos</td>
+                                                                <td>--</td>
+                                                                <td>Masajes de relajación</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>11:00 AM - 1:30 PM</td>
+                                                                <td>Medicina Estética</td>
+                                                                <td>--</td>
+                                                                <td>Masajes de relajación</td>
+                                                                <td>--</td>
+                                                                <td>Chocolato Terapia</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1:30 PM - 2:30 PM</td>
+                                                                <td>Exfoliación </td>
+                                                                <td>--</td>
+                                                                <td>Suana</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>Aroma Terapia</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3:00 PM - 4:30 PM</td>
+                                                                <td>---</td>
+                                                                <td>Exfoliación</td>
+                                                                <td>Masaje con Cuarzos</td>
+                                                                <td>Aroma Terapia</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>5:00 PM - 6:30 PM</td>
+                                                                <td>--</td>
+                                                                <td>Música Terapia</td>
+                                                                <td>--</td>
+                                                                <td>Masaje de relajación</td>
+                                                                <td>--</td>
+                                                                <td>Yoga</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>7:00 PM - 8:00 PM</td>
+                                                                <td>--</td>
+                                                                <td>Exfoliación</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>--</td>
+                                                                <td>-Masajes de relajación</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="myModalLabel">Nueva Entrada de Agenda</h4>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div id="testmodal" style="padding: 5px 20px;">
+                                        <form id="antoform" class="form-horizontal calender" role="form">
+
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Titulo</label>
+                                                <div class="col-sm-9">
+                                                    <input name="titulo" required="true" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Descripción</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button submit" class="btn btn-primary"><i class="fa fa-archive" aria-hidden="true"></i>&nbsp;&nbsp;Guardar </button>
+                                   
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close" aria-hidden="true" style="color:#fff;"></i>&nbsp;&nbsp;Cancelar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="myModalLabel2">Editar Calendario de Entrada</h4>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div id="testmodal2" style="padding: 5px 20px;">
+                                        <form id="antoform2" class="form-horizontal calender" role="form">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Titulo</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="title2" name="title2"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Descripción</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary antosubmit2">Guardar Cambios</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+                    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+                </div>
+
+
+                <!--TOdo resposcto a la page-->
+
+
+
+
+
+
+            </main>
+
+
+
+        </ui:define>
+    </ui:composition>
+</html>
+

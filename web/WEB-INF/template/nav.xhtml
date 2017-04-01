@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+        
+    <h:body>
+        
+         <!--Menu lateral, top y menu hambuerguesa-->
+                <nav>
+                    <!-- Sidebar -->
+                    <nav class="menu  ">
+                        <div id="usuario" class="container-fluid target ">
+                            <div class="row bg-color-primary-0">
+                                <div class="row">
+                                    <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1">
+                                        <nav class="navbar navbar-fixed-top bg-color-primary-4 " id="sidebar-wrapper" role="navigation">
+                                            <ul class="nav sidebar-nav">
+                                                <li class="sidebar-brand   ">
+
+                                                    <center><i><h2 class="  " style="color:white; ">Maternity Club</h2></i></center>
+
+                                                </li>
+                                                <!-- SIDEBAR USERPIC -->
+                                                <div class="profile-userpic">
+                                                    <h:graphicImage library="img" name="anonimo.jpg" class="img-responsive" style="height:70px;width:70px;margin-top:20px;"   alt=""/>
+                                                </div>
+
+                                                <!-- END SIDEBAR USERPIC -->
+                                                <!-- SIDEBAR USER TITLE -->
+                                                <div class="profile-usertitle">
+                                                    <div class="profile-usertitle-name">
+                                                        Carolina Guerrero
+                                                    </div>
+                                                    <div class="profile-usertitle-job">
+                                                        Especialista prenatal
+                                                    </div>
+                                                </div>
+                                                <!-- END SIDEBAR USER TITLE -->
+                                                <!-- SIDEBAR BUTTONS -->
+                                                <div class="profile-userbuttons">
+                                                    <button type="button" class="btn-theme btn-sm" data-toggle="modal" data-target="#miModal">Cambiar foto</button>
+                                                </div>
+
+                                                <!-- END SIDEBAR BUTTONS -->
+                                                <li class="dropdown ">
+                                                    <a href="Programas.html" class="dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> Area</a>
+                                                    <ul class="dropdown-menu " role="menu">
+                                                        <li class="dropdown-header" style="color:white;"><center>Servicio: </center></li>
+                                                        <li><a href="#">Programa Prenatal</a></li>
+                                                        <li><a href="#">Programa Posparto</a></li>
+                                                        <li><a href="#">Spa</a></li>
+                                                        <li><a href="#">Club Bebé</a></li>
+
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a  type="button"  class="s-btn-home" href="../home/index.html" >
+                                                        <div class="">  <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Página principal</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a  type="button"  class="s-btn-foro" href="estadisticas.html" >
+                                                        <div class=""><span class="fa fa-pie-chart" aria-hidden="true"></span> Estadísticas </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a  type="button" id="s-btn-galeria" class="" href="Foro.html" >
+                                                        <div class="h">  <span class="fa fa-globe" aria-hidden="true"></span> Foro </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a  type="button" id="s-btn-perfil" class="" href="perfil.xhtml">
+                                                        <div class=""> <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Perfil </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a  type="button" id="s-btn-programas" class="" href="Usuarios.html">
+                                                        <div class="">  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Programas </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a  type="button" id="s-btn-agenda" class="" href="Agenda.html">
+                                                        <div class=""> <span class="fa fa-calendar" aria-hidden="true"></span> Agenda  </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a  type="button" id="s-btn-usuarios" title="Control de usuarios" class=" sh" href="Programas.html">
+                                                        <div class="">  <span class="fa fa-users" aria-hidden="true"></span> Usuarios </div>
+                                                    </a>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </nav>
+
+                                    </div>
+
+                                    <div class=" col-xs-5 col-sm-5 col-md-5 col-md-offset-1 letraslogos">
+
+                                        <a  class=" navbar-brand pull-left " href="n.html"> 
+                                            <div class="letraslogos" ><span class="hidden-xs hidden-sm"> Maternity Club &amp; Gym </span> 
+                                                <h:graphicImage id="logo" library="img" class="logo animated zoomIn col-xs-2 col-xs-offset-0 hidden-sm  col-md-1 col-md-offset-0 col-lg-2 col-md-offset-0 col-lg- col-lg-offset-0 " alt="brand" name="logo color empre.png" /> 
+                                            </div></a>
+                                    </div>
+                                    <div style="padding-top:5px;" class="col-md-6 h-xs col-sm-6 col-lg-6 ">
+
+                                        <div style="padding:0;" class="pull-right">
+
+                                            <div class="btn-group user-control">
+                                                <a href="#" class="dropdown-toggle btn" data-toggle="dropdown" aria-expanded="true">
+                                                    <i class="fa fa-bell-o fa-lg"></i>
+                                                    <span class="label label bg-color-primary-1">10</span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li style="color:white;" class="header">Tienes 10 notificaciones</li>
+                                                    <li>
+                                                        <!-- inner menu: contains the actual data -->
+                                                        <div class="slimScrollDiv" style="position: libraryative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style="overflow: auto; width: 100%; height: 200px;">
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="fa fa-users    text-aqua"></i> 5 Nuevos usuarios registrados al programa prenatal
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="fa fa-warning text-yellow"></i>  5 Nuevos usuarios registrados al programa posparto
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="fa fa-users text-red"></i> 5 Publicaciones nuevas
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="fa fa-user text-red"></i>Ingresaron 10 usuarios al club bebé
+                                                                    </a>
+                                                                </li>
+                                                            </ul></div>
+                                                    </li>
+                                                    <li class="footer"><a href="#">Ver Todas las notificaciones</a></li>
+                                                </ul>
+                                                <a style="color:white; padding:0;" class="btn" href=""><h:graphicImage library="img" name="anonimo.jpg" alt="" id="user" class="img-radius img-responsive img-circle"/>Carolina Guerrero</a>
+                                                <a href="#tab1" class="btn" ><span class="fa fa-cog fa-lg"></span></a>
+                                                <a href="#" class="btn" id="salir" ><span class="fa fa-sign-out fa-lg"></span></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></nav>
+                    <!-- /#sidebar-wrapper -->
+
+                    <!-- Barras menu Content ->hamburguesa -->
+
+                    <div id="page-content-wrapper">
+                        <button type="button" class="hamburger is-closed"  data-placement="bottom" title="menu despliegable" data-toggle="offcanvas">
+                            <span class="hamb-top"></span>
+                            <span class="hamb-middle"></span>
+                            <span class="hamb-bottom"></span>
+                        </button>
+                    </div>
+
+                    <!--Fin menu hamburguesa-->
+
+                    <!-- menu 2 navbar -->
+
+
+                    <div class="row ">
+                        <div class="col-md-12 ">
+                            <div  class=" btn-pref btn-group btn-group-justified btn-group  " role="group" aria-label="...">
+                                <div  class="btn-group "  role="group">
+                                    <a href="Perfil.html" data-toggle="tooltip" data-placement="bottom" title="Configura tu perfil" class="btn bg-color-primary-5  "    >
+                                        <span class="glyphicon glyphicon-user visible-xs" aria-hidden="true"></span><p class="hidden-xs">Perfil  <span class="glyphicon glyphicon-user" aria-hidden="true"></span></p>
+                                    </a>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <a href="Programas.html" data-toggle="tooltip" data-placement="bottom" title="Consultar todos los programas" class="btn bg-color-primary-5 "    >
+                                        <span class="glyphicon glyphicon-heart visible-xs" aria-hidden="true"></span> <p  class="hidden-xs">Programas  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> </p>
+                                    </a>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <a href="Agenda.html" class="btn bg-color-primary-5 "   data-toggle="tooltip" data-placement="bottom" title="Horarios y agenda del gimnasio" >
+                                        <span class="fa fa-calendar visible-xs" aria-hidden="true"></span> <p class="hidden-xs">Agenda <span class="fa fa-calendar" aria-hidden="true"></span></p>
+                                    </a>
+                                </div>  <div class="btn-group" role="group">
+                                    <a href="Usuarios.html" class="btn bg-color-primary-5 "  data-toggle="tooltip" data-placement="bottom" title="Personal Medico Maternity"  >
+                                        <span class="fa fa-users  visible-xs" aria-hidden="true"></span> <p class="hidden-xs">Area Maternity  <span class="fa fa-users" aria-hidden="true"></span>     </p>
+                                    </a>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <a href="Foro.html" class="btn bg-color-primary-5 "  data-toggle="tooltip" data-placement="bottom" title="! Publica algo ¡"  >
+                                        <span class="fa fa-globe visible-xs" aria-hidden="true"></span>
+                                        <p class="hidden-xs"> Foro  <span class="fa fa-globe" aria-hidden="true"></span> </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> </div>
+
+
+                    <!--fin menu 2 navbar -->
+                </nav>
+                <!-- fin nav -->
+
+                <!--Menu lateral, top y menu hambuerguesa-->
+        
+        
+    </h:body>
+
+</html>

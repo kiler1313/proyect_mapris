@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <!-- Modal para cambiar foto -->
+    <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 align="center"><span class="fa fa-user"></span> ¿Quieres cambiar la foto de tu perfil?</h4>
+                </div>
+                <div class="modal-body" align="center" >
+                    <div> <h:graphicImage library="img" name="anonimo.jpg" class="img-circle" style="width:30%;" alt=""/> </div>
+                    <div> <label class="btn btn-success" style="margin-top: 10px;">
+                            <input type="file" name="subirFoto" style="margin-top:5px;" accept="img/"/> Haz click para subir tu foto
+                        </label></div>
+                    <small>*En breve se cambiará tu foto</small>
+                </div>
+
+                <div class="modal-footer">
+                    <div align="center">
+
+                        <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" data-dismiss="modal" class="btn btn-success">Aceptar</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Fin del modal para cambiar la foto -->
+</html>
+

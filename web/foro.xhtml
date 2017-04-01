@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="/WEB-INF/template/template.xhtml">
+        
+        <ui:define name="contenido">
+            
+             <main> 
+                 
+                  <!--TOdo resposcto a la page-->
+      <!--Posterar-->
+      <div class="container-iner">
+       <!-- Foro -->
+       <br/>
+       <br/>
+
+        <div class="col-md-12 ">  
+      <div class="col-md-10 col-md-offset-1 shadow well" style="background-color: white;">
+
+                    <div align="center" >
+                      <h1 >Realiza tus posteos en la página</h1>
+                    </div>
+                  
+          <form class="form-horizontal"  role="form" id="form-post" method="post">
+                    <div class="form-group">
+
+                   <div class="col-md-10 col-md-offset-0">
+                            
+                    <input type="text" class="form-control" id="programa" name="program" placeholder="Introduce el programa a donde vas a publicar la noticia" maxlength="20"/>
+                      </div> <div class="col-md-1">  <span class="input-group-addon no-radius"><i class="fa fa-th-large"></i></span></div>
+                      </div>
+                       <div class="form-group">
+                   <div class="col-md-10 col-md-offset-0">
+                    <input type="text" class="form-control" id="programa" name="email" placeholder="Deja tu correo electronico aquí"/>
+                      </div> <div class="col-md-1"> <span class="input-group-addon no-radius"><i class="fa fa-envelope"></i></span></div>
+                      </div>
+                       <div class="form-group">
+                   <div class="col-md-10 col-md-offset-0">
+                    <input type="text" class="form-control" id="programa" name="tema" placeholder="Tema de la noticia"/>
+                      </div> <div class="col-md-1"> <span class="input-group-addon no-radius"><i class="fa fa-star"></i></span></div>
+                      </div>
+                    
+
+                  <div class="col-md-12 col-md-offset-0" style="margin-right: 300px;">
+                <div class="widget-area no-padding blank"> 
+                             <div class="panel-primary" style="background-color: #8f1e4a">
+                              <div class="panel-heading">
+                               <center><p>Postea todas las noticias de la página </p></center>
+                           </div>
+
+
+            <div class="status-upload">
+            <div class="panel-body">
+            <div class="col-md-10">
+                  <textarea placeholder="Escribe las nuevas noticias de la página" rows="10" name="text" class="form-control"></textarea></div>
+                    <ul>
+                       <label class="custom-file-upload fa fa-music">
+                      <input type="file" name=""/> 
+                            
+                    </label>
+                       <label class="custom-file-upload fa fa-video-camera">
+                      <input type="file" name=""/> 
+                            
+                    </label>
+                       <label class="custom-file-upload fa fa-microphone">
+                      <input type="file" name=""/> 
+                            
+                    </label>
+                       <label class="custom-file-upload fa fa-picture-o">
+                      <input type="file" name=""/> 
+                            
+                    </label>
+                    <label class="custom-file-upload fa fa-cog">
+                      <input type="file" name=""/> 
+                            
+                    </label>
+                    </ul>
+                     <button class="btn btn-success" type="submit" id="check">Aceptar</button>
+                     </div>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
+                
+                                 
+                  </form>
+          </div>
+                    </div>
+                    </div>
+                <!-- Status Upload  -->
+            <!-- Widget Area -->
+       <!-- fin foro -->
+
+
+        <!--Registrar a programa--> 
+     
+                    
+
+
+
+
+
+                </main>
+
+            
+            
+        </ui:define>
+    </ui:composition>
+</html>
+
