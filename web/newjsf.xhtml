@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pst="http://java.sun.com/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      
+    <ui:composition template="/WEB-INF/template/template.xhtml">
+        
+        <ui:define name="contenido">
+            
+            <main>
+                <h2>Estilin alive</h2>
+                
+   <h:dataTable value="#{prueba.buscarTodos}" var="p"  border="2"
+            cellspacing="1" cellpadding="1">
+    <h:column>
+        <f:facet name="header">Nombre</f:facet>
+        <h:outputText value="#{p.nombre}" />
+    </h:column>
+    <h:column>
+        <f:facet name="header">Apellidp</f:facet>
+        <h:outputText value="#{p.apellidos}" />
+    </h:column>
+    <h:column >
+        <f:facet name="header">Email</f:facet>
+        <h:outputText value="#{p.email}" />
+    </h:column>
+       <h:column >
+        <f:facet name="header">Actions</f:facet>
+       
+        <a class="btn btn-success"  data-toggle="modal" data-target="#miModal2">Agregar</a>
+        <h:form>
+        <h:commandButton class="btn btn-success" value="Eliminar" actionListener="#{prueba.eliminar(p)}" onclick="return confirm('¿Esta seguro que quiere elimnarlo?')"></h:commandButton>
+       </h:form>
+        <a class="btn btn-success"  data-toggle="modal" data-target="#miModal3">Editar</a>
+       
+            
+    </h:column>
+</h:dataTable>
+                
+  <div class="modal fade" id="miModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 align="center"><span class="fa fa-users"></span> Usuarios activos en el programa prenatal</h4>
+                            </div>
+                            <div class="modal-body" align="center" >
+
+                                <div class="col-md-12 col-md-offset-0">
+                                   
+                             <h:form prependId="false">
+        <h1><h:outputText value="Nuevo Usuario"/></h1>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Cedula:" for="cedula" />
+            <h:inputText id="cedula" value="#{prueba.u.cedula}" title="Cedula" required="true" requiredMessage="The Cedula field is required."/>
+            <h:outputLabel value="Nombre:" for="nombre" />
+            <h:inputText id="nombre" value="#{prueba.u.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+            <h:outputLabel value="Apellidos:" for="apellidos" />
+            <h:inputText id="apellidos" value="#{prueba.u.apellidos}" title="Apellidos" required="true" requiredMessage="The Apellidos field is required."/>
+            <h:outputLabel value="Email:" for="email" />
+            <h:inputText id="email" value="#{prueba.u.email}" title="Email" />
+            <h:outputLabel value="Telefono:" for="telefono" />
+            <h:inputText id="telefono" value="#{prueba.u.telefono}" title="Telefono" />
+            <h:outputLabel value="Dirreccion:" for="dirreccion" />
+            <h:inputText id="dirreccion" value="#{prueba.u.dirreccion}" title="Dirreccion" />
+            <h:outputLabel value="FechaNaci:" for="fechaNaci" />
+            <h:inputText id="fechaNaci" value="#{prueba.u.fechaNaci}" title="FechaNaci" required="true" requiredMessage="The FechaNaci field is required.">
+                <f:convertDateTime pattern="dd/MM/yyyy" />
+            </h:inputText>
+            <h:outputLabel value="Clave:" for="clave" />
+            <h:inputText id="clave" value="#{prueba.u.clave}" title="Clave" required="true" requiredMessage="The Clave field is required."/>
+        </h:panelGrid>
+        <h:commandButton type="submit" pst:data-dismiss="modal"  title="Aceptar" class="btn btn-success" value="Aceptar" action="#{prueba.añadir()}"></h:commandButton>
+
+    </h:form>
+                                </div> 
+
+
+
+          <div class="modal-footer">
+                                    <div align="center">
+
+                                        <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                
+                
+                <div class="modal fade" id="miModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 align="center"><span class="fa fa-users"></span> Usuarios activos en el programa prenatal</h4>
+                            </div>
+                            <div class="modal-body" align="center" >
+
+                                <div class="col-md-12 col-md-offset-0">
+                                   
+                             <h:form prependId="false">
+        <h1><h:outputText value="Nuevo Usuario"/></h1>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Cedula:" for="cedula" />
+            <h:inputText id="cedula" value="#{prueba.u.cedula}" title="Cedula" readonly="true" required="true" requiredMessage="The Cedula field is required."/>
+            <h:outputLabel value="Nombre:" for="nombre" />
+            <h:inputText id="nombre" value="#{prueba.u.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+            <h:outputLabel value="Apellidos:" for="apellidos" />
+            <h:inputText id="apellidos" value="#{prueba.u.apellidos}" title="Apellidos" required="true" requiredMessage="The Apellidos field is required."/>
+            <h:outputLabel value="Email:" for="email" />
+            <h:inputText id="email" value="#{prueba.u.email}" title="Email" />
+            <h:outputLabel value="Telefono:" for="telefono" />
+            <h:inputText id="telefono" value="#{prueba.u.telefono}" title="Telefono" />
+            <h:outputLabel value="Dirreccion:" for="dirreccion" />
+            <h:inputText id="dirreccion" value="#{prueba.u.dirreccion}" title="Dirreccion" />
+            <h:outputLabel value="FechaNaci:" for="fechaNaci" />
+            <h:inputText id="fechaNaci" value="#{prueba.u.fechaNaci}" title="FechaNaci" required="true" requiredMessage="The FechaNaci field is required.">
+                <f:convertDateTime pattern="dd/MM/yyyy" />
+            </h:inputText>
+            <h:outputLabel value="Clave:" for="clave" />
+            <h:inputText id="clave" value="#{prueba.u.clave}" title="Clave" required="true" requiredMessage="The Clave field is required."/>
+        </h:panelGrid>
+        <h:commandButton type="submit" pst:data-dismiss="modal"  title="Aceptar" class="btn btn-success" value="Aceptar" action="#{prueba.añadir()}"></h:commandButton>
+
+    </h:form>
+                                </div> 
+
+
+
+          <div class="modal-footer">
+                                    <div align="center">
+
+                                        <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </main>
+            
+        </ui:define>
+        
+        
+        
+    </ui:composition>
+
+         
+</html>
+

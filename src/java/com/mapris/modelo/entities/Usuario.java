@@ -21,8 +21,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -49,30 +47,27 @@ public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
     @Column(name = "cedula")
     private Long cedula;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 20)
+  
     @Column(name = "nombre")
     private String nombre;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 40)
+
     @Column(name = "apellidos")
     private String apellidos;
     // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
-    @Size(max = 40)
+   
     @Column(name = "email")
     private String email;
     @Column(name = "telefono")
     private Integer telefono;
-    @Size(max = 20)
+   
     @Column(name = "dirreccion")
     private String dirreccion;
     @Basic(optional = false)
-    @NotNull
+    
     @Column(name = "fechaNaci")
     @Temporal(TemporalType.DATE)
     private Date fechaNaci;
@@ -83,8 +78,6 @@ public class Usuario implements Serializable {
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "usuario", fetch = FetchType.EAGER)
     private Cliente cliente;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
     @Column(name = "clave")
     private String clave;
     
@@ -95,11 +88,15 @@ public class Usuario implements Serializable {
         this.cedula = cedula;
     }
 
-    public Usuario(Long cedula, String nombre, String apellidos, Date fechaNaci) {
+    public Usuario(Long cedula, String nombre, String apellidos,String email,int telefono, String direccion, Date fechaNaci, String clave) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellidos = apellidos;
+        this.email  = email;
+        this.telefono = telefono;
+        this.dirreccion = direccion;
         this.fechaNaci = fechaNaci;
+        this.clave  = clave;
     }
 
     public Long getCedula() {
@@ -209,10 +206,15 @@ public class Usuario implements Serializable {
     public void setClave(String clave) {
         this.clave = clave;
     }
+
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.Usuario[ cedula=" + cedula + " ]";
+        return "Usuario{" + "cedula=" + cedula + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email + ", telefono=" + telefono + ", dirreccion=" + dirreccion + ", fechaNaci=" + fechaNaci + ", personalMedico=" + personalMedico + ", cliente=" + cliente + ", clave=" + clave + '}';
     }
+
+   
+    
+    
 
    
     

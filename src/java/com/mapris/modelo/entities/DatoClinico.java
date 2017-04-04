@@ -16,8 +16,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -38,10 +36,8 @@ public class DatoClinico implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
     @Column(name = "idCliente")
     private Long idCliente;
-    @Size(max = 2)
     @Column(name = "rh")
     private String rh;
     @Column(name = "datosPosparto")
@@ -121,7 +117,9 @@ public class DatoClinico implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.DatoClinico[ idCliente=" + idCliente + " ]";
+        return "DatoClinico{" + "idCliente=" + idCliente + ", rh=" + rh + ", datosPosparto=" + datosPosparto + ", datosPrenatales=" + datosPrenatales + '}';
     }
+
+   
     
 }

@@ -52,7 +52,7 @@ public class Sesion implements Serializable {
     private Date hora;
     @Column(name = "numeroSesiones")
     private Integer numeroSesiones;
-    @JoinColumn(name = "idPersonal Medico", referencedColumnName = "idPersonalMedico")
+    @JoinColumn(name = "idPersonalMedico", referencedColumnName = "idPersonalMedico")
     @ManyToOne(fetch = FetchType.EAGER)
     private PersonalMedico idPersonalMedico;
     @JoinColumn(name = "idPrograma", referencedColumnName = "idProgramas")
@@ -136,7 +136,9 @@ public class Sesion implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.Sesion[ idSesiones=" + idSesiones + " ]";
+        return "Sesion{" + "idSesiones=" + idSesiones + ", fecha=" + fecha + ", hora=" + hora + ", numeroSesiones=" + numeroSesiones + ", idPrograma "+idPrograma + '}';
     }
+
+    
     
 }

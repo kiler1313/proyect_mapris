@@ -17,8 +17,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -38,12 +36,11 @@ public class Rutina implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
+   
     @Column(name = "idRutinas")
     private Integer idRutinas;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
+   
     @Column(name = "nombre")
     private String nombre;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idRutinas", fetch = FetchType.EAGER)
@@ -56,6 +53,7 @@ public class Rutina implements Serializable {
         this.idRutinas = idRutinas;
     }
 
+    
     public Rutina(Integer idRutinas, String nombre) {
         this.idRutinas = idRutinas;
         this.nombre = nombre;
@@ -108,7 +106,8 @@ public class Rutina implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.Rutina[ idRutinas=" + idRutinas + " ]";
+        return "Rutina{" + "idRutinas=" + idRutinas + ", nombre=" + nombre + ", rutinaServicioList=" + rutinaServicioList + '}';
     }
+
     
 }

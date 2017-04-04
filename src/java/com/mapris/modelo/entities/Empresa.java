@@ -40,15 +40,14 @@ public class Empresa implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
+  
     @Column(name = "idEmpresa")
     private Long idEmpresa;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
+    
     @Column(name = "nombre")
     private String nombre;
-    @Size(max = 45)
+  
     @Column(name = "direccion")
     private String direccion;
     @Column(name = "telefono")
@@ -131,7 +130,9 @@ public class Empresa implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.Empresa[ idEmpresa=" + idEmpresa + " ]";
+        return "Empresa{" + "idEmpresa=" + idEmpresa + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + '}';
     }
+
+   
     
 }

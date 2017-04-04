@@ -20,8 +20,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -41,13 +39,10 @@ public class Cliente implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
     @Column(name = "idClientes")
     private Long idClientes;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 20)
-    @Column(name = "estado")
+     @Column(name = "estado")
     private String estado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCliente", fetch = FetchType.EAGER)
     private List<Inscripcion> inscripcionList;
@@ -63,6 +58,7 @@ public class Cliente implements Serializable {
     private Usuario usuario;
 
     public Cliente() {
+       
     }
 
     public Cliente(Long idClientes) {
@@ -154,7 +150,9 @@ public class Cliente implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.Cliente[ idClientes=" + idClientes + " ]";
+        return "Cliente{" + "idClientes=" + idClientes + ", estado=" + estado + ", inscripcionList=" + inscripcionList + ", datoClinico=" + datoClinico + ", idEmpresa=" + idEmpresa + '}';
     }
+
+  
     
 }

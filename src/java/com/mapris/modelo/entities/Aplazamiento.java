@@ -20,8 +20,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -40,12 +38,9 @@ public class Aplazamiento implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
     @Column(name = "idaplazamiento")
     private Integer idaplazamiento;
     @Lob
-    @Size(max = 65535)
-    @Column(name = "motivo")
     private String motivo;
     @Column(name = "fechaRetorno")
     @Temporal(TemporalType.TIMESTAMP)
@@ -115,7 +110,9 @@ public class Aplazamiento implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.Aplazamiento[ idaplazamiento=" + idaplazamiento + " ]";
+        return "Aplazamiento{" + "idaplazamiento=" + idaplazamiento + ", motivo=" + motivo + ", fechaRetorno=" + fechaRetorno + ", idcliente=" + idcliente + '}';
     }
+
+    
     
 }

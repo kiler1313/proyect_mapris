@@ -18,8 +18,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -40,17 +38,15 @@ public class PersonalMedico implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
+ 
     @Column(name = "idPersonalMedico")
     private Long idPersonalMedico;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
+    
     @Column(name = "perfilProfesional")
     private String perfilProfesional;
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 20)
+    
     @Column(name = "cargo")
     private String cargo;
     @OneToMany(mappedBy = "idPersonalMedico", fetch = FetchType.EAGER)
@@ -135,7 +131,11 @@ public class PersonalMedico implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.PersonalMedico[ idPersonalMedico=" + idPersonalMedico + " ]";
+        return "PersonalMedico{" + "idPersonalMedico=" + idPersonalMedico + ", perfilProfesional=" + perfilProfesional + ", cargo=" + cargo + ", sesionList=" + sesionList + '}';
     }
+
+  
+
+    
     
 }

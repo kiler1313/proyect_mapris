@@ -17,8 +17,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -38,14 +36,11 @@ public class Servicio implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
     @Column(name = "idServicio")
     private Integer idServicio;
-    @Size(max = 20)
     @Column(name = "nombre")
     private String nombre;
     @Lob
-    @Size(max = 65535)
     @Column(name = "descripcion")
     private String descripcion;
     @OneToMany(mappedBy = "idServicios", fetch = FetchType.EAGER)
@@ -113,7 +108,9 @@ public class Servicio implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.Servicio[ idServicio=" + idServicio + " ]";
+        return "Servicio{" + "idServicio=" + idServicio + ", nombre=" + nombre + ", descripcion=" + descripcion + '}';
     }
+
+    
     
 }

@@ -21,8 +21,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -43,17 +41,14 @@ public class Permiso implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
     @Column(name = "id")
     private Integer id;
-    @Size(max = 45)
     @Column(name = "nombre")
     private String nombre;
     @Lob
-    @Size(max = 65535)
     @Column(name = "url")
     private String url;
-    @Size(max = 45)
+  
     @Column(name = "icon")
     private String icon;
     @JoinTable(name = "permisosroles", joinColumns = {
@@ -154,7 +149,9 @@ public class Permiso implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.Permiso[ id=" + id + " ]";
+        return "Permiso{" + "id=" + id + ", nombre=" + nombre + ", url=" + url + ", icon=" + icon + ", rolList=" + rolList + ", permisosPadre=" + permisosPadre + '}';
     }
+
+   
     
 }

@@ -113,7 +113,8 @@ public class RutinaServicio implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mapris.modelo.entities.RutinaServicio[ idRutinaServicios=" + idRutinaServicios + " ]";
+        return "RutinaServicio{" + "idRutinaServicios=" + idRutinaServicios + ", idServicios=" + idServicios + '}';
     }
-    
+
+   
 }

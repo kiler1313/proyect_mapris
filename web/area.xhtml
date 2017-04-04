@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="/WEB-INF/template/template.xhtml">
+        
+        <ui:define name="contenido">
+            
+             <main > 
+
+                    <!--TOdo resposcto a la page-->
+    
+    <div class="containe-iner "  style="margin-left :100px; margin-right:100px;" id="features">
+	<div class="row">
+	
+
+		<a data-toggle="modal" data-target="#miModal2">
+          <div class="col-md-3 feature" >
+           <div class="col-md-8 col-md-offset-2" align="center">
+        <h:graphicImage  class="img-responsive"  library="img" name="banner-prenatal.png" style="width:75%;" alt="placeholder+image"/>
+    	    </div>
+            <h3>Programa Prenatal</h3>
+            <div class="title_border"></div>
+            <p>A partir de la semana 14 de gestación. <br/> Personal Medico del programa </p>
+            </div></a>
+        <a data-toggle="modal" data-target="#miModal3"><div class="col-md-3 feature" >
+           <div class="col-md-8 col-md-offset-2" align="center">
+<h:graphicImage class="img-responsive"    library="img"  name="banner-programa-posparto.png" alt="placeholder+image"/>
+    	    </div>
+            <h3>Programa posnatal</h3>
+            <div class="title_border"></div>
+            <p>A partir del primer més posparto. <br/> Personal Medico del programa</p>
+            </div></a>
+        <a data-toggle="modal" data-target="#miModal4"><div class="col-md-3 feature" >
+           <div class="col-md-9 col-md-offset-2">
+<h:graphicImage class="img-responsive"   library="img" name="banner-club-del-bebe.jpg" style="width:90%;" alt="placeholder+image"/>
+            </div>
+            <h3>  Club  del  bebé  </h3>
+            <div class="title_border"></div>
+            <p>Actividades y Talleres para bebés de 2 a 10 meses. <br/> Personal Medico del programa</p>
+            </div></a>
+             <a data-toggle="modal" data-target="#miModal5"><div class="col-md-3 feature" >
+           <div class="col-md-9 col-md-offset-2">
+<h:graphicImage class="img-responsive"  library="img" name="p.png" style="width:90%;" alt="placeholder+image"/>
+            </div>
+            <h3>  Spa  </h3>
+            <div class="title_border"></div>
+            <p>Relajación, masajes y chocolaterapia. <br/> Personal Medico del programa</p>
+            </div></a>
+            
+	</div>
+</div>
+    <!--TOdo resposcto a la page-->
+    
+    
+    
+    <!--Modales inicio-->
+    <!-- Modal de usuarios prenatal -->
+      <div class="modal fade" id="miModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 align="center"><span class="fa fa-users"></span> Personal medico del programa prenatal</h4>
+            </div>
+          <div class="modal-body" align="center" >
+             
+      <div class="col-md-12 col-md-offset-0">
+        <div class="page-header">
+          <h2 class="text-center">Tabla - Personal Medico</h2>
+
+          <table data-toggle="table" data-pagination="true" data-search="true" data-row-style="rowStyle" data-sort-name="usuarios" data-sort-order="desc" data-show-columns="true" data-page-list="[5,10,20,50,100,200]" data-show-refresh="true"
+       data-show-toggle="true">
+            <thead>
+              <tr>
+                <th data-field="id" data-haling="right" data-aling="center">Cedula</th>
+                <th data-field="name" data-sortable="true" >Nombre y Apellido</th>
+                <th data-field="price" >Profesión</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>52325645</td>
+                <td>Luisa Santos</td>
+                <td>Ginecobstetra</td>
+              </tr>
+              <tr>
+                <td>52567834</td>
+                <td>Marisol Pardo</td>
+                <td>Enfermera </td>
+              </tr>
+              <tr>
+                <td>10989045</td>
+                <td>Maria Perez</td>
+                <td>Ginecologa</td>
+              </tr>
+              <tr>
+                <td>1267879345</td>
+                <td>Martina Pachón</td>
+                <td>Psicologa</td>
+              </tr>
+              <tr>
+                <td>1236765645</td>
+                <td>Patricia Ramirez</td>
+                <td>Masajista</td>
+              </tr>
+              <tr>
+                <td>45787656</td>
+                <td>Carmen Torres</td>
+                <td>Preparadora fisica</td>
+              </tr>
+               </tbody>
+            </table>
+          </div>
+        </div> 
+      
+        
+
+          <div class="modal-footer">
+            <div align="center">
+
+              <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="submit" data-dismiss="modal" class="btn btn-success">Aceptar</button>
+            </div>
+          </div>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+        
+
+      <!-- fin del modal de los usuarios prenatal -->
+
+      <!-- modal usuarios posparto -->
+<div class="modal fade" id="miModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 align="center"><span class="fa fa-users"></span> Personal medico en el programa posparto</h4>
+            </div>
+          <div class="modal-body" align="center" >
+           <div class="col-md-12 col-md-offset-0">
+        <div class="page-header">
+          <h2 class="text-center">Tabla - Personal medico</h2>
+
+          <table data-toggle="table" data-pagination="true" data-search="true" data-row-style="rowStyle" data-sort-name="usuarios" data-sort-order="desc" data-show-columns="true" data-page-list="[5,10,20,50,100,200]" data-show-refresh="true"
+       data-show-toggle="true">
+            
+            <thead>
+              <tr>
+                <th data-field="id" data-haling="right" data-aling="center">Cedula</th>
+                <th data-field="name" data-sortable="true" >Nombre y Apellido</th>
+                <th data-field="price" >Profesión</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>52365524</td>
+                <td>Martha Jimenez</td>
+                <td>Preparadora fisica</td>
+              </tr>
+              <tr>
+                <td>54256783</td>
+                <td>Lizeth Rojas</td>
+                <td>Masajista</td>
+              </tr>
+              <tr>
+                <td>10989045</td>
+                <td>Maria Chachon</td>
+                <td>Nutricionista</td>
+              </tr>
+              <tr>
+                <td>1238567947</td>
+                <td>Carmen Polar</td>
+                <td>Ginecologa</td>
+              </tr>
+              <tr>
+                <td>1276564536</td>
+                <td>Ana Martinez</td>
+                <td>Yoga</td>
+              </tr>
+            </tbody>
+
+            </table>
+          </div>
+        </div> 
+      
+        
+
+
+          <div class="modal-footer">
+            <div align="center">
+
+              <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="submit" data-dismiss="modal" class="btn btn-success">Aceptar</button>
+
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
+
+
+      </div>
+    
+
+      <!-- fin del modal de los usuarios posparto -->
+  
+        <!-- modal usarios club bebe  -->
+
+        <div class="modal fade" id="miModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 align="center"><span class="fa fa-users"></span> Personal medico en el programa club bebé</h4>
+            </div>
+          <div class="modal-body" align="center" >
+            <div class="col-md-12 col-md-offset-0">
+        <div class="page-header">
+          <h2 class="text-center">Tabla - Club bebé</h2>
+
+          <table data-toggle="table" data-pagination="true" data-search="true" data-row-style="rowStyle" data-sort-name="usuarios" data-sort-order="desc" data-show-columns="true" data-page-list="[5,10,20,50,100,200]" data-show-refresh="true"
+       data-show-toggle="true">
+            <thead>
+              <tr>
+                <th data-field="id" data-haling="right" data-aling="center">Cedula</th>
+                <th data-field="name" data-sortable="true" >Nombre y Apellido </th>
+                <th data-field="price" >Profesión</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>52563542</td>
+                <td>Pilar Buenaventura</td>
+                <td>Taller Shantala</td>
+              </tr>
+              <tr>
+                <td>52673458</td>
+                <td>Maria Perdomo</td>
+                <td>Rumba Baby</td>
+              </tr>
+              <tr>
+                <td>10045989</td>
+                <td>Martha Tello</td>
+                <td>Yoga</td>
+              </tr>
+              <tr>
+                <td>1237456978</td>
+                <td>Orfelia Lineros</td>
+                <td>Estimulación temprana del bebé</td>
+              </tr>
+              <tr>
+                <td>1263476556</td>
+                <td>Maria Solar</td>
+                <td>Recreación y juegos para bebés</td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+        </div> 
+      
+        
+
+          <div class="modal-footer">
+            <div align="center">
+
+              <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="submit" data-dismiss="modal" class="btn btn-success">Aceptar</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+
+
+      </div>
+        <!-- modal para el spa -->
+        <div class="modal fade" id="miModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 align="center"><span class="fa fa-users"></span> Personal medico  en el programa spa</h4>
+            </div>
+          <div class="modal-body" align="center" >
+            <div class="col-md-12 col-md-offset-0">
+        <div class="page-header">
+          <h2 class="text-center">Tabla - Personal Medico</h2>
+
+          <table data-toggle="table" data-pagination="true" data-search="true" data-row-style="rowStyle" data-sort-name="usuarios" data-sort-order="desc" data-show-columns="true" data-page-list="[5,10,20,50,100,200]" data-show-refresh="true"
+       data-show-toggle="true">
+            <thead>
+              <tr>
+                <th data-field="id" data-haling="right" data-aling="center">Cedula</th>
+                <th data-field="name" data-sortable="true" >Nombre y Apellido</th>
+                <th data-field="price" >¨Profesión</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>52563542</td>
+                <td>Martina Lopez</td>
+                <td>Estéticista Profesional</td>
+              </tr>
+              <tr>
+                <td>52458673</td>
+                <td>Maria Cordoba</td>
+                <td>Masajista</td>
+              </tr>
+              <tr>
+                <td>10804599</td>
+                <td>Martha Ramirez</td>
+                <td>Terapeuta Corporal</td>
+              </tr>
+              <tr>
+                <td>1237456978</td>
+                <td>Carmen Rocio</td>
+                <td>Aroma Terapia</td>
+              </tr>
+              <tr>
+                <td>1765256346</td>
+                <td>Rocio Valbuena</td>
+                <td>Masajista</td>
+              </tr>
+              <tr>
+                <td>45866775</td>
+                <td>Marisol Soltinor</td>
+                <td>Auxiliar Estética</td>
+              </tr>
+              <tr>
+                <td>65483937</td>
+                <td>Angela Lopez</td>
+                <td>Yoga</td>
+              </tr>
+          </tbody>
+            </table>
+          </div>
+        </div> 
+      
+        
+
+          <div class="modal-footer">
+            <div align="center">
+
+              <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="submit" data-dismiss="modal" class="btn btn-success">Aceptar</button>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+
+
+      </div>
+           <!-- fin del modal para el spa -->
+</main>
+
+            
+            
+        </ui:define>
+    </ui:composition>
+</html>
+
